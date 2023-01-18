@@ -32,7 +32,7 @@ export default class Login extends Component {
       .then((data) => {
         toast.success(data.message);
           window.localStorage.setItem("token", data.data);
-          window.location.href = "/dashboard";
+          window.location.href = "./dashboard";
           this.setState({
 
             email: "",
