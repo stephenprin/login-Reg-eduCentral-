@@ -30,9 +30,7 @@ export default class Login extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "userRegister");
-        
-          toast.success(data.message);
+        toast.success(data.message);
           window.localStorage.setItem("token", data.data);
           window.location.href = "/dashboard";
           this.setState({
